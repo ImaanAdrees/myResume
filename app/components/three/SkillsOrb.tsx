@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Billboard, Text } from "@react-three/drei";
 import { Suspense, useMemo, useRef } from "react";
 import type { Group } from "three";
@@ -40,7 +40,15 @@ function fibonacciSphere(count: number, radius: number) {
 
 function SkillCloud() {
   const groupRef = useRef<Group>(null);
-  const points = useMemo(() => fibonacciSphere(skills.length, 2.4), []);
+  const { size } = useThree();
+  // On small viewports, shrink the cloud radius so labels stay legible inside the canvas
+  const isSmall = size.width < 640;
+  const radius = isSmall ? 1.9 : 2.4;
+  const fontSize = isSmall ? 0.34 : 0.28;
+  const points = useMemo(
+    () => fibonacciSphere(skills.length, radius),
+    [radius],
+  );
 
   useFrame((_, delta) => {
     if (!groupRef.current) return;
@@ -52,7 +60,7 @@ function SkillCloud() {
     <group ref={groupRef}>
       {/* faint inner sphere */}
       <mesh>
-        <icosahedronGeometry args={[1.1, 1]} />
+        <icosahedronGeometry args={[radius * 0.45, 1]} />
         <meshBasicMaterial color="#EAB308" wireframe transparent opacity={0.15} />
       </mesh>
 
@@ -62,11 +70,11 @@ function SkillCloud() {
         return (
           <Billboard key={s} position={[x, y, z]}>
             <Text
-              fontSize={0.28}
+              fontSize={fontSize}
               color={isAccent ? "#F472B6" : "#EAB308"}
               anchorX="center"
               anchorY="middle"
-              outlineWidth={0.005}
+              outlineWidth={0.006}
               outlineColor="#0F172A"
             >
               {s}

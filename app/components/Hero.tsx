@@ -26,39 +26,39 @@ export default function Hero() {
       <div className="absolute inset-0 -z-0 bg-gradient-to-b from-background/40 via-background/20 to-background pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center fade-up">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-card/80 backdrop-blur border border-green-500/30 mb-6">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center fade-up py-20 sm:py-0">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-card/80 backdrop-blur border border-green-500/30 mb-5 sm:mb-6">
           <span className="w-2 h-2 rounded-full bg-green-500 pulse-ring" />
-          <span className="text-sm font-medium text-text/90">
+          <span className="text-xs sm:text-sm font-medium text-text/90">
             Open to work
           </span>
         </div>
 
-        <p className="text-primary font-mono text-sm md:text-base mb-3 tracking-widest">
+        <p className="text-primary font-mono text-xs sm:text-sm md:text-base mb-2 sm:mb-3 tracking-widest">
           {"// hello world, i'm"}
         </p>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-3 sm:mb-4 leading-[1.05]">
           <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Imaan Adrees
           </span>
         </h1>
 
-        <h2 className="text-xl md:text-3xl font-semibold text-text/90 mb-6">
+        <h2 className="text-lg sm:text-xl md:text-3xl font-semibold text-text/90 mb-4 sm:mb-6">
           Computer Science Graduate &{" "}
           <span className="text-accent">Full-Stack Developer</span>
         </h2>
 
-        <p className="text-base md:text-lg text-muted max-w-2xl mx-auto mb-10">
+        <p className="text-sm sm:text-base md:text-lg text-muted max-w-2xl mx-auto mb-8 sm:mb-10">
           I build interactive web & mobile experiences — from AI-powered voice
           tools to full-stack platforms. Crafting clean code with React, Next.js,
           React Native, and .NET.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-background font-semibold transition-all hover:scale-105 hover:glow-primary"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full bg-primary text-background font-semibold transition-all hover:scale-105 hover:glow-primary"
           >
             Get in touch
             <span className="transition-transform group-hover:translate-x-1">
@@ -70,7 +70,7 @@ export default function Hero() {
             href="https://github.com/ImaanAdrees"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-primary hover:text-primary"
+            className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-primary hover:text-primary"
           >
             <svg
               width="20"
@@ -86,7 +86,7 @@ export default function Hero() {
 
           <a
             href="mailto:imaanadrees124@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-accent hover:text-accent"
           >
             <svg
               width="20"

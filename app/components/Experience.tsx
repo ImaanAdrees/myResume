@@ -30,7 +30,7 @@ const items = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-24 px-6 bg-card/30">
+    <section id="experience" className="relative py-16 sm:py-24 px-4 sm:px-6 bg-card/30">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           eyebrow="// my journey"
@@ -63,7 +63,7 @@ export default function Experience() {
                       left ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left [direction:ltr]"
                     }`}
                   >
-                    <div className="bg-card rounded-2xl p-6 border border-white/5 hover:border-primary/40 transition-colors">
+                    <div className="bg-card rounded-2xl p-5 sm:p-6 border border-white/5 hover:border-primary/40 transition-colors">
                       <div className="flex items-center gap-2 mb-2 flex-wrap">
                         <span
                           className={`text-xs font-mono px-2 py-1 rounded ${
@@ -78,7 +78,7 @@ export default function Experience() {
                           {item.period}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-text mb-1">
+                      <h3 className="text-lg sm:text-xl font-bold text-text mb-1">
                         {item.role}
                       </h3>
                       <p className="text-sm text-muted mb-3">{item.org}</p>

@@ -73,7 +73,7 @@ function TiltCard({ project }: { project: Project }) {
         ref={ref}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
-        className="tilt-card relative bg-card rounded-2xl p-6 border border-white/5 hover:border-primary/50 h-full"
+        className="tilt-card relative bg-card rounded-2xl p-5 sm:p-6 border border-white/5 hover:border-primary/50 h-full"
       >
         {/* Glow on hover */}
         <div
@@ -91,7 +91,7 @@ function TiltCard({ project }: { project: Project }) {
         </div>
 
         <h3
-          className={`text-2xl font-bold mb-1 ${
+          className={`text-xl sm:text-2xl font-bold mb-1 ${
             isPrimary ? "text-primary" : "text-accent"
           }`}
           style={{ transform: "translateZ(30px)" }}
@@ -131,7 +131,7 @@ function TiltCard({ project }: { project: Project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 px-6">
+    <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           eyebrow="// my work"
@@ -139,7 +139,7 @@ export default function Projects() {
           description="A selection of things I've built across web, mobile and desktop."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {projects.map((p, i) => (
             <Reveal key={p.title} animation="fade-up" delay={i * 120}>
               <TiltCard project={p} />

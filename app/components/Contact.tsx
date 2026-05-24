@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-6">
+    <section id="contact" className="relative py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <SectionHeading
           eyebrow="// say hi"
@@ -38,11 +38,11 @@ export default function Contact() {
           description="Got a role, project or idea? Drop a message — I'd love to hear about it."
         />
 
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-5 gap-6 sm:gap-8">
           {/* Side info */}
-          <div className="md:col-span-2 space-y-5">
+          <div className="md:col-span-2 space-y-4 sm:space-y-5">
             <Reveal animation="fade-right" delay={0}>
-              <div className="bg-card rounded-2xl p-6 border border-white/5">
+              <div className="bg-card rounded-2xl p-5 sm:p-6 border border-white/5">
                 <div className="text-xs font-mono text-primary uppercase tracking-widest mb-2">
                   Email
                 </div>
@@ -56,7 +56,7 @@ export default function Contact() {
             </Reveal>
 
             <Reveal animation="fade-right" delay={120}>
-              <div className="bg-card rounded-2xl p-6 border border-white/5">
+              <div className="bg-card rounded-2xl p-5 sm:p-6 border border-white/5">
                 <div className="text-xs font-mono text-accent uppercase tracking-widest mb-2">
                   GitHub
                 </div>
@@ -72,7 +72,7 @@ export default function Contact() {
             </Reveal>
 
             <Reveal animation="fade-right" delay={240}>
-              <div className="bg-card rounded-2xl p-6 border border-green-500/30">
+              <div className="bg-card rounded-2xl p-5 sm:p-6 border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-2 h-2 rounded-full bg-green-500 pulse-ring" />
                   <div className="text-xs font-mono text-green-400 uppercase tracking-widest">
@@ -91,7 +91,7 @@ export default function Contact() {
           <Reveal animation="fade-left" delay={120} className="md:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="bg-card rounded-2xl p-6 md:p-8 border border-white/5 space-y-5"
+              className="bg-card rounded-2xl p-5 sm:p-6 md:p-8 border border-white/5 space-y-4 sm:space-y-5"
             >
             <div>
               <label
@@ -106,7 +106,7 @@ export default function Contact() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Jane Doe"
-                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-sm sm:text-base text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors"
               />
             </div>
 
@@ -123,7 +123,7 @@ export default function Contact() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="jane@example.com"
-                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors"
+                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-sm sm:text-base text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors"
               />
             </div>
 
@@ -140,7 +140,7 @@ export default function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Tell me about your project, role, or just say hi..."
-                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-sm sm:text-base text-text placeholder:text-muted/60 focus:outline-none focus:border-primary transition-colors resize-none"
               />
             </div>
 
