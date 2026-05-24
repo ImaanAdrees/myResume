@@ -5,9 +5,6 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Required for `output: "export"` — pre-render this image at build time.
-export const dynamic = "force-static";
-
 export default async function OGImage() {
   return new ImageResponse(
     (

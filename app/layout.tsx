@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://imaanadrees.github.io/myResume";
+const SITE_URL = "https://imaanadrees.vercel.app";
 const SITE_NAME = "Imaan Adrees — Portfolio";
 const DESCRIPTION =
   "Portfolio of Imaan Adrees — Computer Science graduate (BS, 2022–2026) and full-stack developer. I build interactive web, mobile and desktop apps with Next.js, React, React Native, Node.js and C#. Open to work.";

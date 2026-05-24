@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const SITE_URL = "https://imaanadrees.github.io/myResume";
+const SITE_URL = "https://imaanadrees.vercel.app";
 
 const personJsonLd = {
   "@context": "https://schema.org",
