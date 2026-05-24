@@ -90,6 +90,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: "P4Vz3wA55Mrq9AEUqizMLh8BvGLTqOP6TOwknVTipds",
+  },
   formatDetection: {
     email: false,
     address: false,
