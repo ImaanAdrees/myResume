@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-5 gap-10 items-center">
           {/* Decorative 3D-ish card */}
-          <div className="md:col-span-2 flex justify-center">
+          <Reveal animation="fade-right" className="md:col-span-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-72 md:h-72 float">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 to-accent/30 blur-2xl" />
               <div
@@ -32,45 +33,63 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Bio */}
           <div className="md:col-span-3 space-y-5">
-            <p className="text-lg text-text/90 leading-relaxed">
-              Hi, I&apos;m{" "}
-              <span className="text-primary font-semibold">Imaan Adrees</span>{" "}
-              — a Computer Science graduate who loves turning ideas into
-              interactive, real-world products. From web platforms to mobile
-              apps and desktop systems, I enjoy building things that people
-              actually use.
-            </p>
-            <p className="text-muted leading-relaxed">
-              I completed my{" "}
-              <span className="text-text">
-                Bachelor&apos;s in Computer Science (2022 – 2026)
-              </span>
-              , and along the way I&apos;ve worked on AI-driven products, full-stack
-              web apps and academic projects. I&apos;m comfortable across the stack —
-              React, Next.js, React Native, Node, C#, and a handful of databases.
-            </p>
+            <Reveal animation="fade-left" delay={100}>
+              <p className="text-lg text-text/90 leading-relaxed">
+                Hi, I&apos;m{" "}
+                <span className="text-primary font-semibold">Imaan Adrees</span>{" "}
+                — a Computer Science graduate who loves turning ideas into
+                interactive, real-world products. From web platforms to mobile
+                apps and desktop systems, I enjoy building things that people
+                actually use.
+              </p>
+            </Reveal>
+
+            <Reveal animation="fade-left" delay={200}>
+              <p className="text-muted leading-relaxed">
+                I completed my{" "}
+                <span className="text-text">
+                  Bachelor&apos;s in Computer Science (2022 – 2026)
+                </span>
+                , and along the way I&apos;ve worked on AI-driven products,
+                full-stack web apps and academic projects. I&apos;m comfortable
+                across the stack — React, Next.js, React Native, Node, C#, and a
+                handful of databases.
+              </p>
+            </Reveal>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="bg-card rounded-xl p-4 border border-white/5">
-                <div className="text-2xl font-bold text-primary">2026</div>
-                <div className="text-xs text-muted mt-1">BS Computer Science</div>
-              </div>
-              <div className="bg-card rounded-xl p-4 border border-white/5">
-                <div className="text-2xl font-bold text-accent">5+</div>
-                <div className="text-xs text-muted mt-1">Projects shipped</div>
-              </div>
-              <div className="bg-card rounded-xl p-4 border border-white/5">
-                <div className="text-2xl font-bold text-primary">Full-Stack</div>
-                <div className="text-xs text-muted mt-1">Web · Mobile · Desktop</div>
-              </div>
-              <div className="bg-card rounded-xl p-4 border border-white/5 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500" />
-                <div className="text-sm font-semibold text-text">Open to work</div>
-              </div>
+              <Reveal animation="fade-up" delay={300}>
+                <div className="bg-card rounded-xl p-4 border border-white/5">
+                  <div className="text-2xl font-bold text-primary">2026</div>
+                  <div className="text-xs text-muted mt-1">BS Computer Science</div>
+                </div>
+              </Reveal>
+              <Reveal animation="fade-up" delay={400}>
+                <div className="bg-card rounded-xl p-4 border border-white/5">
+                  <div className="text-2xl font-bold text-accent">5+</div>
+                  <div className="text-xs text-muted mt-1">Projects shipped</div>
+                </div>
+              </Reveal>
+              <Reveal animation="fade-up" delay={500}>
+                <div className="bg-card rounded-xl p-4 border border-white/5">
+                  <div className="text-2xl font-bold text-primary">Full-Stack</div>
+                  <div className="text-xs text-muted mt-1">
+                    Web · Mobile · Desktop
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal animation="fade-up" delay={600}>
+                <div className="bg-card rounded-xl p-4 border border-white/5 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-green-500" />
+                  <div className="text-sm font-semibold text-text">
+                    Open to work
+                  </div>
+                </div>
+              </Reveal>
             </div>
           </div>
         </div>

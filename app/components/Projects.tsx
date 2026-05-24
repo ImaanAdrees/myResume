@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
 type Project = {
   title: string;
@@ -139,8 +140,10 @@ export default function Projects() {
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p) => (
-            <TiltCard key={p.title} project={p} />
+          {projects.map((p, i) => (
+            <Reveal key={p.title} animation="fade-up" delay={i * 120}>
+              <TiltCard project={p} />
+            </Reveal>
           ))}
         </div>
       </div>

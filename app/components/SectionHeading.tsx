@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function SectionHeading({
   eyebrow,
   title,
@@ -8,7 +10,7 @@ export default function SectionHeading({
   description?: string;
 }) {
   return (
-    <div className="text-center mb-14">
+    <Reveal animation="fade-up" className="text-center mb-14">
       <p className="text-primary font-mono text-sm tracking-widest mb-3">
         {eyebrow}
       </p>
@@ -19,6 +21,6 @@ export default function SectionHeading({
       {description && (
         <p className="text-muted max-w-2xl mx-auto">{description}</p>
       )}
-    </div>
+    </Reveal>
   );
 }

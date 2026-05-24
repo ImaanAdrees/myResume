@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -40,51 +41,58 @@ export default function Contact() {
         <div className="grid md:grid-cols-5 gap-8">
           {/* Side info */}
           <div className="md:col-span-2 space-y-5">
-            <div className="bg-card rounded-2xl p-6 border border-white/5">
-              <div className="text-xs font-mono text-primary uppercase tracking-widest mb-2">
-                Email
-              </div>
-              <a
-                href="mailto:imaanadrees124@gmail.com"
-                className="text-text hover:text-primary break-all"
-              >
-                imaanadrees124@gmail.com
-              </a>
-            </div>
-
-            <div className="bg-card rounded-2xl p-6 border border-white/5">
-              <div className="text-xs font-mono text-accent uppercase tracking-widest mb-2">
-                GitHub
-              </div>
-              <a
-                href="https://github.com/ImaanAdrees"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text hover:text-accent"
-              >
-                github.com/ImaanAdrees
-              </a>
-            </div>
-
-            <div className="bg-card rounded-2xl p-6 border border-green-500/30">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-2 h-2 rounded-full bg-green-500 pulse-ring" />
-                <div className="text-xs font-mono text-green-400 uppercase tracking-widest">
-                  Status
+            <Reveal animation="fade-right" delay={0}>
+              <div className="bg-card rounded-2xl p-6 border border-white/5">
+                <div className="text-xs font-mono text-primary uppercase tracking-widest mb-2">
+                  Email
                 </div>
+                <a
+                  href="mailto:imaanadrees124@gmail.com"
+                  className="text-text hover:text-primary break-all"
+                >
+                  imaanadrees124@gmail.com
+                </a>
               </div>
-              <p className="text-text font-semibold">Open to work</p>
-              <p className="text-xs text-muted mt-1">
-                Available for full-time, freelance & collaboration.
-              </p>
-            </div>
+            </Reveal>
+
+            <Reveal animation="fade-right" delay={120}>
+              <div className="bg-card rounded-2xl p-6 border border-white/5">
+                <div className="text-xs font-mono text-accent uppercase tracking-widest mb-2">
+                  GitHub
+                </div>
+                <a
+                  href="https://github.com/ImaanAdrees"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text hover:text-accent"
+                >
+                  github.com/ImaanAdrees
+                </a>
+              </div>
+            </Reveal>
+
+            <Reveal animation="fade-right" delay={240}>
+              <div className="bg-card rounded-2xl p-6 border border-green-500/30">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-2 h-2 rounded-full bg-green-500 pulse-ring" />
+                  <div className="text-xs font-mono text-green-400 uppercase tracking-widest">
+                    Status
+                  </div>
+                </div>
+                <p className="text-text font-semibold">Open to work</p>
+                <p className="text-xs text-muted mt-1">
+                  Available for full-time, freelance & collaboration.
+                </p>
+              </div>
+            </Reveal>
           </div>
 
           {/* Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="md:col-span-3 bg-card rounded-2xl p-6 md:p-8 border border-white/5 space-y-5"
-          >
+          <Reveal animation="fade-left" delay={120} className="md:col-span-3">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-card rounded-2xl p-6 md:p-8 border border-white/5 space-y-5"
+            >
             <div>
               <label
                 htmlFor="name"
@@ -157,7 +165,8 @@ export default function Contact() {
                 </span>
               )}
             </div>
-          </form>
+            </form>
+          </Reveal>
         </div>
       </div>
     </section>

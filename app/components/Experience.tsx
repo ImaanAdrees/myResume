@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
 const items = [
   {
@@ -55,7 +56,9 @@ export default function Experience() {
                   <div className="absolute left-4 md:left-1/2 top-2 w-4 h-4 rounded-full bg-primary border-4 border-background md:-translate-x-1/2 glow-primary z-10" />
 
                   {/* card */}
-                  <div
+                  <Reveal
+                    animation={left ? "fade-right" : "fade-left"}
+                    delay={i * 100}
                     className={`pl-12 md:pl-0 ${
                       left ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left [direction:ltr]"
                     }`}
@@ -95,7 +98,7 @@ export default function Experience() {
                         ))}
                       </ul>
                     </div>
-                  </div>
+                  </Reveal>
 
                   {/* spacer for opposite side on desktop */}
                   <div className="hidden md:block" />
@@ -105,7 +108,7 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="mt-14 text-center">
+        <Reveal animation="zoom-in" className="mt-14 text-center">
           <div className="inline-flex items-center gap-3 bg-card border border-green-500/30 rounded-full px-5 py-3">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500 pulse-ring" />
             <span className="text-sm">
@@ -115,7 +118,7 @@ export default function Experience() {
               <span className="text-muted">— open to full-time / freelance roles</span>
             </span>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
