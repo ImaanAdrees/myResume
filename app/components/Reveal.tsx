@@ -24,12 +24,6 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
-    // Respect users who prefer reduced motion — show immediately.
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVisible(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
