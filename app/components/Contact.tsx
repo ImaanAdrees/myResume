@@ -45,10 +45,10 @@ export default function Contact() {
                 Email
               </div>
               <a
-                href="mailto:imaan@example.com"
+                href="mailto:imaanadrees124@gmail.com"
                 className="text-text hover:text-primary break-all"
               >
-                imaan@example.com
+                imaanadrees124@gmail.com
               </a>
             </div>
 
@@ -57,12 +57,12 @@ export default function Contact() {
                 GitHub
               </div>
               <a
-                href="https://github.com/"
+                href="https://github.com/ImaanAdrees"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text hover:text-accent"
               >
-                github.com/imaan-adrees
+                github.com/ImaanAdrees
               </a>
             </div>
 

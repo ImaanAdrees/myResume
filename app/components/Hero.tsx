@@ -67,7 +67,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/ImaanAdrees"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-primary hover:text-primary"
@@ -85,7 +85,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="mailto:imaan@example.com"
+            href="mailto:imaanadrees124@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-white/10 text-text font-semibold transition-all hover:border-accent hover:text-accent"
           >
             <svg
