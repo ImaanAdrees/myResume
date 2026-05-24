@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+// Required for `output: "export"` — pre-render at build time.
+export const dynamic = "force-static";
+
 const SITE_URL = "https://imaanadrees.github.io/myResume";
 
 export default function sitemap(): MetadataRoute.Sitemap {
